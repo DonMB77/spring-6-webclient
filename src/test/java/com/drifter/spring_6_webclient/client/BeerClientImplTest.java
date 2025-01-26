@@ -25,4 +25,18 @@ class BeerClientImplTest {
             throw new RuntimeException(e);
         }
     }
+
+    @Test
+    void listBeerMap() {
+
+        beerClient.listBeerMap().subscribe(response -> {
+            System.out.println(response);
+        });
+
+        try {
+            Thread.sleep(1000L);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
